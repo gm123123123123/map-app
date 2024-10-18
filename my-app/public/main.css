@@ -1,3 +1,14 @@
+body {
+    font-family: 'Malgun Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
 .product {
     display: flex;
     padding: 10px;
@@ -26,19 +37,19 @@
     font-size: 13px;
 }
 
-/* 아래의 모든 코드는 영역::코드로 사용 */
+/* Scrollbar style */
 #list::-webkit-scrollbar {
-    width: 10px; /* 스크롤바의 너비 */
+    width: 10px;
 }
 
 #list::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #217af4; /* 스크롤바의 색상 */
+    height: 30%;
+    background: #217af4;
     border-radius: 10px;
 }
 
 #list::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, 0.1); /* 스크롤바 뒷 배경 색상 */
+    background: rgba(33, 122, 244, 0.1);
 }
 
 #btn {
@@ -57,7 +68,6 @@
     text-align: left;
     overflow: hidden;
     font-size: 12px;
-    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
     line-height: 1.5;
 }
 
