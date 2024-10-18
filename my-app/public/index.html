@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recycling Map</title>
-    <link rel="stylesheet" href="./main.css"> <!-- CSS 파일 경로 -->
+    <link rel="stylesheet" href="main.css"> <!-- CSS 파일 경로 -->
     <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=996a638740c8a80e36817308b316a849&autoload=false"></script> <!-- Kakao Maps API -->
 </head>
 <body>
@@ -52,11 +52,26 @@
                 <div class="price">무료</div>
             </div>
         </div>
+        <div class="product">
+            <div class="thumbnail" style="background-image:url('https://example.com/image6.jpg');"></div>
+            <div class="info">
+                <div class="title">정왕동 재활용 장소</div>
+                <div class="date">2024-10-18</div>
+                <div class="price">무료</div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="thumbnail" style="background-image:url('https://example.com/image7.jpg');"></div>
+            <div class="info">
+                <div class="title">군포시청 재활용 장소</div>
+                <div class="date">2024-10-18</div>
+                <div class="price">무료</div>
+            </div>
+        </div>
     </div>
 
     <script>
         kakao.maps.load(function() {
-            // 지도를 초기화하는 코드
             var mapContainer = document.getElementById('map'); // 지도를 표시할 div
             var mapOption = {
                 center: new kakao.maps.LatLng(37.5665, 126.978), // 서울
@@ -65,12 +80,21 @@
 
             var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
 
-            // 재활용 장소 마커 추가 예시
-            var markerPosition = new kakao.maps.LatLng(37.5665, 126.978); // 마커 위치
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
+            // 마커 추가 예시
+            var markers = [
+                {title: "중앙공원 재활용 장소", position: new kakao.maps.LatLng(37.5665, 126.978)},
+                {title: "안양시청 재활용 장소", position: new kakao.maps.LatLng(37.3848, 126.926)},
+                {title: "학운공원 재활용 장소", position: new kakao.maps.LatLng(37.4178, 126.918)},
+                {title: "갈매공원 재활용 장소", position: new kakao.maps.LatLng(37.3941, 126.902)},
+                {title: "평촌역 재활용 장소", position: new kakao.maps.LatLng(37.3860, 126.907)},
+            ];
+
+            markers.forEach(function(markerData) {
+                var marker = new kakao.maps.Marker({
+                    position: markerData.position
+                });
+                marker.setMap(map); // 마커를 지도에 표시
             });
-            marker.setMap(map); // 마커를 지도에 표시
         });
     </script>
 </body>
