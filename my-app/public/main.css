@@ -1,11 +1,8 @@
-/* main.css */
-
-/* 상품 리스트 스타일 */
 .product {
     display: flex;
     padding: 10px;
-    border-bottom: 2px solid #e5e7eb;
 }
+
 .thumbnail {
     max-width: 200px;
     width: 100%;
@@ -13,44 +10,43 @@
     background-size: cover;
     background-position: center;
 }
+
 .product .price {
     font-size: 16px;
     font-weight: 600;
 }
+
 .product .title {
     font-size: 17px;
     font-weight: 600;
 }
+
 .product .date {
     color: grey;
     font-size: 13px;
 }
 
-/* 스크롤바 스타일링 */
+/* 아래의 모든 코드는 영역::코드로 사용 */
 #list::-webkit-scrollbar {
-    width: 10px; /* 스크롤바 너비 */
-}
-#list::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바 높이 */
-    background: #217af4; /* 스크롤바 색상 */
-    border-radius: 10px;
-}
-#list::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, 0.1); /* 스크롤바 배경색 */
+    width: 10px; /* 스크롤바의 너비 */
 }
 
-/* 버튼 스타일 */
+#list::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #217af4; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+#list::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, 0.1); /* 스크롤바 뒷 배경 색상 */
+}
+
 #btn {
     display: flex;
     padding: 10px;
     z-index: 2;
-    background-color: #4caf50; /* 버튼 배경 색상 */
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-/* Kakao Maps 오버레이 정보 스타일 */
 .wrap {
     position: absolute;
     left: 0;
@@ -64,10 +60,12 @@
     font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
     line-height: 1.5;
 }
+
 .wrap * {
     padding: 0;
     margin: 0;
 }
+
 .wrap .info {
     width: 500px;
     height: 120px;
@@ -77,10 +75,12 @@
     overflow: hidden;
     background: #fff;
 }
+
 .wrap .info:nth-child(1) {
     border: 0;
     box-shadow: 0px 1px 2px #888;
 }
+
 .info .title {
     padding: 5px 0 0 10px;
     height: 30px;
@@ -89,6 +89,7 @@
     font-size: 18px;
     font-weight: bold;
 }
+
 .info .close {
     position: absolute;
     top: 10px;
@@ -98,28 +99,34 @@
     height: 17px;
     background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
 }
+
 .info .close:hover {
     cursor: pointer;
 }
+
 .info .body {
     position: relative;
     overflow: hidden;
 }
+
 .info .desc {
     position: relative;
     margin: 13px 0 0 90px;
     height: 75px;
 }
+
 .desc .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .desc .jibun {
     font-size: 11px;
     color: #888;
     margin-top: -2px;
 }
+
 .info .img {
     position: absolute;
     top: 6px;
@@ -130,6 +137,7 @@
     color: #888;
     overflow: hidden;
 }
+
 .info:after {
     content: '';
     position: absolute;
@@ -140,6 +148,7 @@
     height: 12px;
     background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
 }
+
 .info .link {
     color: #5085BB;
 }
